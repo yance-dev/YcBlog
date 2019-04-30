@@ -1,0 +1,81 @@
+ <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的标签<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              {% for tag in tag_list %}
+                         {% if username %}
+{#                        <p><a href= "{{ username }}/tag/{{ tag.0 }}">{{ tag.0 }}({{ tag.1 }})</a></p>#}
+                        <li><a href= "{% url 'blog_info' username=username condition='tag' param=tag.0 %}">{{ tag.0 }}({{ tag.1 }})</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+          </ul>
+        </li>
+ <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">随笔分类<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              {% for cate in cate_list %}
+                <li><a href="/{{ username }}/category/{{ cate.0 }}">{{ cate.0 }}({{ cate.1 }})</a></li>
+            {% endfor %}
+
+          </ul>
+        </li>
+
+{#<li class="dropdown">#}
+{#  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">#}
+{#    Dropdown#}
+{#    <span class="caret"></span>#}
+{#  </button>#}
+{#  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">#}
+{#    <li><a href="#">Action</a></li>#}
+{#    <li><a href="#">Another action</a></li>#}
+{#    <li><a href="#">Something else here</a></li>#}
+{#    <li role="separator" class="divider"></li>#}
+{#    <li><a href="#">Separated link</a></li>#}
+{#  </ul>#}
+{#</li>#}
+
+<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">随笔归档<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+               {% for date in date_list %}
+                <li><a href="/{{ username }}/archive/{{ date.0 }}">{{ date.0 }}({{ date.1 }})</a></li>
+            {% endfor %}
+
+          </ul>
+        </li>
+
+
+
+{#<div class="label">#}
+{#    <div class="panel panel-warning">#}
+{#                <div class="panel-heading">我的标签</div>#}
+{#                <div class="panel-body">#}
+{##}
+{#                    {% for tag in tag_list %}#}
+{#                         {% if username %}#}
+{#                        <p><a href= "{{ username }}/tag/{{ tag.0 }}">{{ tag.0 }}({{ tag.1 }})</a></p>#}
+{#                        <p><a href= "{% url 'blog_info' username=username condition='tag' param=tag.0 %}">{{ tag.0 }}({{ tag.1 }})</a></p>#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                </div>#}
+{#            </div>#}
+
+{#    <div class="panel panel-danger">#}
+{#        <div class="panel-heading">随笔分类</div>#}
+{#        <div class="panel-body">#}
+{#            {% for cate in cate_list %}#}
+{#                <p><a href="/{{ username }}/category/{{ cate.0 }}">{{ cate.0 }}({{ cate.1 }})</a></p>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+
+{#    <div class="panel panel-success">#}
+{#        <div class="panel-heading">随笔归档</div>#}
+{#        <div class="panel-body">#}
+{#            {% for date in date_list %}#}
+{#                <p><a href="/{{ username }}/archive/{{ date.0 }}">{{ date.0 }}({{ date.1 }})</a></p>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{# </div>#}

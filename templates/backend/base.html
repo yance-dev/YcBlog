@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客后台管理 - 博客园</title>
+
+    <link rel="stylesheet" href="/static/blog/bs/css/bootstrap.css">
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/blog/bs/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/blog/css/backend.css">
+</head>
+<body>
+
+<div class="header">
+    <p class="title">
+        <span class="my_title"><a href="/index/" >GEEK</a></span>
+        后台管理
+
+        <a class="info" href="/logout/">注销</a>
+        <span class="info"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;{{ request.user.username }}</span>
+    </p>
+</div>
+
+
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                           aria-expanded="true" aria-controls="collapseOne">
+                            操作
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <p><a href="/cn_backend/add_article/">添加文章</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-9">
+
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                                          data-toggle="tab">文章</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                           data-toggle="tab">日记</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">眼镜</a>
+                </li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">相册</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+
+                    {% block content %}
+
+                    {% endblock %}
+
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+
+                    <img src="/static/blog/img/meinv2.jpg" alt="">
+                    <img src="/static/blog/img/meinv3.jpg" alt="">
+                    <img class="pull-right" src="/static/blog/img/meinv.jpg" alt="">
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+
+                    <img width="180" height="180" src="/static/blog/img/hashiqi2.jpg" alt="">
+
+                    <img width="180" height="180" src="/static/blog/img/dogg4.jpg" alt="">
+                    <img width="180" height="180" src="/static/blog/img/linhaifeng.jpg" alt=""><br>
+                    <img width="180" height="180" src="/static/blog/img/dogg3.jpeg" alt="">
+                    <img width="180" height="180" src="/static/blog/img/dogge2.jpg" alt="">
+
+                    <img width="180" height="180" src="/static/blog/img/dogg5.jpg" alt="">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

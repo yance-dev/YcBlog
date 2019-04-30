@@ -1,0 +1,25 @@
+<div id="news_content">
+            <div id="news_body">
+
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200759969-1427737544.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/006BZx9Tgy1fv0seio59jj31kw11xgu0.jpg" data-image-enhancer="larger than 578"></p>
+<p>　　以前看《火影忍者》的时候，经常会看到有火影粉丝说：没有什么是一个丸子解决不了的，如果有那就再搓一个。</p>
+<p>　　数量，有的时候可以解决很多问题。</p>
+<p>　　手机厂商们在解决拍照这件事上也是一样，一个摄像头不够？那就上两个，两个还不够就装三个，如果三个还不够的话……上五个总够了吧？这让我想起了以前装了八个喇叭的广场舞神器山寨机，只不过现在这个装了五个摄像头的是诺基亚。</p>
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200800021-987295550.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/dd40bc98fb190c2.jpg" data-image-enhancer="larger than 578"></p>
+<p>　　疑似 Nokia 9 的真机图于今天在网络上曝光，预计这将是一台旗舰设备，HMD 为了 Nokia 9 也是准备了很久，在去年就屡次传出过消息，但却一直没有正式推出。尽管更多具体参数上还不得而知，但相信应该会用上骁龙 845&nbsp;这样的主流旗舰平台。</p>
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200800040-1354263124.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/5686aeb7358e43e.jpg" data-image-enhancer="larger than third of 578"></p>
+<p>　　不过别的配置先不说，光背后那五个摄像头就足够震住不少人了，虽然暂时还不知道效果如何，但眼球上倒是已经先被牢牢地抓住，再加上闪光灯和对焦模块已经和七个葫芦娃不相上下了。</p>
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200759943-442221550.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/5f8f5e4b50dc694.jpg" data-image-enhancer="larger than 578"></p>
+<p>　　当然我不是说 Nokia 9 这五个摄像头就是哗众取宠的噱头，实际上多摄像头方案已经成为了目前高端手机必备的设计，像苹果的 iPhone X 就搭载了两个摄像头，OPPO 上个月刚发布的 R17 Pro 搭载了三个摄像头，华为 Mate 20 也被曝光搭载了三个摄像头等等。</p>
+<p>　　手机拍照的进化是一个循序渐进的过程，十年前我们觉得 320 万像素支持自动对焦就很清晰了，结果后来又出了 800 万，1200 万，2000 万甚至 4100 万像素。对焦方式也增加了激光对焦，PDAF 对焦，全像素双核对焦等等。</p>
+<p>　　尽管这几年来是手机的体积已经增大了不少，但在厚度上却比以往更加纤薄，导致感光元件和镜头一直无法突破物理的桎梏。正因为如此，很多已经成熟的特性在手机上都不好实现，比如光学变焦和大光圈虚化。</p>
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200759934-1315228365.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/v2-b30eb24dae9a500e5a800a1e9aadb8d6_b.jpg" data-image-enhancer="larger than 578"></p>
+<p>　　目前大部分手机采用的都是广角定焦镜头，就是说要想放大或缩小拍摄的主题只能靠走，要么就用数码变焦的方式，当然数码变焦纯粹是暴力放大之后进行裁切，画质会随着放大倍数增加而急剧劣化，实用性也显著降低。双摄的出现，则给了手机一个弥补缺点的机会，比如将一颗焦距更长的镜头放入手机，在主摄像头进行变焦时可以无缝切换到长焦端的副摄。</p>
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200800041-1861184344.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/https_2F2Fblueprint-api-production.s3.amazonaws.com2Fuploads2Fcard2Fimage2F61322F15.jpg" data-image-enhancer="larger than 578"></p>
+<p>　　另外根据手机的灵活配置，副摄像头也不一定会使用长焦镜头，像 LG G5 的副摄就是一颗能够达到 135° 超广角镜头。上周 vivo 发布的 vivo X23 副摄也是一颗 125° 的超广角镜头。再早的时候 HTC M8 还有一颗不参与成像只记录景深信息的副摄像头。</p>
+<p>　　可以看到所谓的多摄像头方案，最大的作用就是解决主摄像头因为物理限制无法独自解决场景问题。此外，还可以将多个摄像头拍摄到的的画面进行合成，从而形成一张更清晰的照片。那 Nokia 9 上的五个摄像头究竟代表什么，是否有不同的分工，目前还不得而知。</p>
+<p>　　大胆猜测一下，目前出现过的双摄方案中，副摄像头出现过长焦镜头、黑白镜头、超广角镜头等，Nokia 是否会一次性全都囊括呢？瞬间让人感觉有一种天秤座圣衣百般武艺的感觉。</p>
+<p style="text-align: center;"><img src="//images2018.cnblogs.com/news/66372/201809/66372-20180909200800032-1556742290.jpg" alt="" data-pre-sourced="yes" data-sourced="yes" data-original="https://images.ifanr.cn/wp-content/uploads/2018/09/1508399744-e0a8ca0fdf20f03ea8b3de6b01054d65.jpg" data-image-enhancer="larger than 578"></p>
+<p>　　但是多摄像头也有一些不小的缺点，比如感光原件占用的空间更大，多摄像头之间的协同工作增加了算法调度的难度，此外由于多摄像头大多是小传感器的方案，对提升画质上没有太多帮助。另外很多功能依靠算法在单摄像头上也是可以实现的，比如 Google 就通过双核感光的算法在单摄上做出了模拟大光圈效果的人像模式。</p>
+<p>　　因为双摄三摄的适用范围更广泛，目前在较权威的 DxO 手机拍照排行榜上，前十名已经悉数被多摄方案占领，单摄最高的手机 Pixel 2XL 得分只有 98 分，已经远低于排名榜首的华为 P20 Pro 的 109 分，尽管 Google 今年预计会推出 Pixel 3/3 XL 两款新机，但从曝光的资料来看依然没有用上双摄方案，不知道 Google 依靠算法模拟的做法在今年是否还依旧自信。</p>
+<p>　　而对于 Nokia 9 来说，摄像头有几个并不重要，更关键的是 HMD 所说提供「同级别下最好的拍照体验」这句承诺能不能实现，如果成像素质和体验真的能惊艳到所有人，那像花洒也是可以被原谅的吧。</p>            </div><!--end: news_body -->

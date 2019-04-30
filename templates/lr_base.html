@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/blog/bs/css/bootstrap.css">
+    <style>
+
+
+        body {
+            color: #333;
+            background-color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .page-header {
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            padding: 50px 50px 30px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+            vertical-align: middle;
+
+        }
+
+        .my_valid {
+            margin-left: 20px;
+        }
+
+        .done {
+            color: #9d9d9d;
+        }
+
+        .my_title {
+            font-size: 22px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="page-header">
+    <h1><a href="/index/">GEEK</a>
+        <small>次时代博客系统</small>
+    </h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-offset-1">
+            <div class="text-center my_title">
+                  {% block title %}
+
+                {% endblock %}
+
+            </div>
+
+
+            <form>
+
+                {% block content %}
+
+                {% endblock %}
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

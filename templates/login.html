@@ -1,0 +1,73 @@
+{% extends 'lr_base.html' %}
+{% block title %}
+    <a href="#" >登录</a>|
+            <a href="/register/" class="done">注册</a>
+{% endblock %}
+{% block content %}
+    <form>
+    {% csrf_token %}
+     <div class="form-group">
+                    <label for="user">用户名</label>
+                    <input type="text" id="user" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">密码</label>
+                    <input type="password" id="pwd" class="form-control">
+                </div>
+                <div class="from-group">
+                    <label for="pwd">验证码</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="text" class=" form-control" id="valid_code">
+                        </div>
+                        <div class="col-md-6 my_valid">
+                            <img width="270" height="32px" id="valid_code_img" src="/get_validCode_img/" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                    <div class="form-group" style="margin-top: 15px">
+                    <input type="button" class="btn btn-success login_btn center-block" value="提交"><span
+                        class="error"></span>
+                </div>
+    </form>
+
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+<script>
+    {#    刷新验证码#}
+    $('#valid_code_img').click(function () {
+        $(this)[0].src += "?"
+
+    });
+    $(".login_btn").click(function () {
+
+
+        $.ajax({
+            url: "",
+            type: "post",
+            data: {
+                user: $("#user").val(),
+                pwd: $("#pwd").val(),
+                valid_code: $("#valid_code").val(),
+                csrfmiddlewaretoken: $("[name='csrfmiddlewaretoken']").val(),
+            },
+            success: function (data) {
+                console.log(data);
+                if (data.user) {
+                    location.href = '/index/'
+                }
+                else {
+                    $('.error').text(data.msg).css({'color': 'red', "margin-left": '10px'})
+                    setTimeout(function () {
+                        $('.error').text('')
+                    }, 1000)
+                }
+
+
+            }
+        })
+
+    })
+</script>
+
+{% endblock %}

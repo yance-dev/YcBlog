@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="article_list">
+            {% for article in article_list %}
+                <div class="article-item panel panel-default">
+                    <p class="blog_title panel-heading" style="font-size: 50px;margin: auto;"><a
+                            href="/{{ article.user.username }}/articles/{{ article.pk }}">{{ article.title }}</a>
+                    </p>
+                    <div class="article-desc panel-body">
+                        {{ article.desc }}
+                    </div>
+                    <div class="panel-footer pub_info ">
+                        <span>发布于 &nbsp;&nbsp;{{ article.create_time|date:"Y-m-d H:i" }}</span>&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-comment"></span>评论({{ article.comment_count }})&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-thumbs-up"></span>点赞({{ article.up_count }})&nbsp;&nbsp;
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

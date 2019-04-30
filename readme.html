@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.cnblogs.com/huang-yc/p/9630644.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="origin">
+<title>BBS+Blog项目开发 - Huang_Yc - 博客园</title>
+<meta property="og:description" content="BBS+Blog项目开发 1.项目需求 2.项目详情 2.1 数据库设计 核心代码： from django.db import models ​ # Create your models here.">
+<link type="text/css" rel="stylesheet" href="./readme_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./readme_files/bundle-BlackLowKey.css">
+<link type="text/css" rel="stylesheet" href="./readme_files/420602.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./readme_files/bundle-BlackLowKey-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/huang-yc/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/huang-yc/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/huang-yc/wlwmanifest.xml">
+<script async="" src="./readme_files/analytics.js"></script><script type="text/javascript" src="./readme_files/encoder.js"></script><script src="./readme_files/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">var currentBlogApp = 'huang-yc', cb_enable_mathjax=false;var isLogined=true;</script>
+<script src="./readme_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/huang-yc/"><img id="blogLogo" src="./readme_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/huang-yc/">Huang_Yc</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/huang-yc/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/Huang_Yc">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/huang-yc/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/huang-yc/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 32&nbsp; </span>
+<span id="stats_article_count">文章 - 1&nbsp; </span>
+<span id="stats-comment_count">评论 - 1</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/huang-yc/p/9630644.html">BBS+Blog项目开发</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><a name="_labelTop"></a><div id="navCategory" style="color:#152e97;"><p style="font-size:18px;"><b>目录</b></p><ul><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label0">1.项目需求</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1">2.项目详情</a><ul><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_0">2.1 数据库设计</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_1">2.2 站点管理</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_2">2.3 注册</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_3">2.4 登录</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_4">2.5 网站首页</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_5">2.6 个人站点</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_6">2.7 文章详情</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_7">&nbsp;</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_8">2.8 后台管理</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label1_9">2.9 批量建立测试数据</a></li></ul></li><li><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_label2">3.源码链接：&nbsp;</a></li></ul></div><p>&nbsp;</p><hr style="height:1px;border:none;border-top:1px dashed #0066CC;"><h1 class="md-end-block md-heading md-focus"><span class="md-expand">BBS+Blog项目开发</span></h1>
+<div style="text-align: right;"><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_labelTop" style="color:#f68a33">回到顶部</a><a name="_label0"></a></div><h2 class="md-end-block md-heading"><span>1.项目需求</span></h2>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span>1 基于ajax和用户认证组件实现登录验证<br><span>2 基于ajax和form组件实现注册功能<br><span>3 系统首页文章列表的渲染<br><span>4 个人站点页面设计<br><span>5 文章详细页的继承<br><span>6 点赞与踩灭<br><span>7 评论功能<br><span>8 富文本编辑器的使用<br><span>9 防止xss攻击</span></span></span></span></span></span></span></span></span></pre>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="https://images2018.cnblogs.com/blog/1356841/201808/1356841-20180830154316945-1613552450.png"><img src="./readme_files/1356841-20180830154316945-1613552450.png" alt=""></span></p>
+<div style="text-align: right;"><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_labelTop" style="color:#f68a33">回到顶部</a><a name="_label1"></a></div><h2 class="md-end-block md-heading"><span>2.项目详情</span></h2>
+<a name="_label1_0"></a><h3 class="md-end-block md-heading"><span>2.1 数据库设计</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span>1.继承AbstractUser<br><span>2.中介模型<br><span>3.联合唯一<br><span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span></span></span></pre>
+<p class="md-end-block">&nbsp;</p>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="https://images2018.cnblogs.com/blog/1356841/201808/1356841-20180830154447123-1865221472.png"><img src="./readme_files/1356841-20180830154447123-1865221472.png" alt=""></span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&#39;ce025303-1cbc-44ff-bfaa-d8f4657def33&#39;)"><img id="code_img_closed_ce025303-1cbc-44ff-bfaa-d8f4657def33" class="code_img_closed" src="./readme_files/ContractedBlock.gif" alt=""><img id="code_img_opened_ce025303-1cbc-44ff-bfaa-d8f4657def33" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide(&#39;ce025303-1cbc-44ff-bfaa-d8f4657def33&#39;,event)" src="./readme_files/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_ce025303-1cbc-44ff-bfaa-d8f4657def33" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">from</span> django.db <span style="color: #0000ff;">import</span><span style="color: #000000;"> models
+​
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> Create your models here.</span>
+<span style="color: #000000;">​
+​
+</span><span style="color: #0000ff;">from</span> django.contrib.auth.models <span style="color: #0000ff;">import</span><span style="color: #000000;"> AbstractUser
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> UserInfo(AbstractUser):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">
+    用户信息
+    </span><span style="color: #800000;">"""</span><span style="color: #000000;">
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    telephone </span>= models.CharField(max_length=11, null=True, unique=<span style="color: #000000;">True)
+    avatar </span>= models.FileField(upload_to=<span style="color: #800000;">'</span><span style="color: #800000;">avatars/</span><span style="color: #800000;">'</span>, default=<span style="color: #800000;">"</span><span style="color: #800000;">avatars/default.png</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+    create_time </span>= models.DateTimeField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">创建时间</span><span style="color: #800000;">'</span>, auto_now_add=<span style="color: #000000;">True)
+​
+    blog </span>= models.OneToOneField(to=<span style="color: #800000;">'</span><span style="color: #800000;">Blog</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, null=True, on_delete=<span style="color: #000000;">models.CASCADE)
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self.username
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Blog(models.Model):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">
+    博客信息
+    </span><span style="color: #800000;">"""</span><span style="color: #000000;">
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    title </span>= models.CharField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">个人博客标题</span><span style="color: #800000;">'</span>, max_length=64<span style="color: #000000;">)
+    site_name </span>= models.CharField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">站点名称</span><span style="color: #800000;">'</span>, max_length=64<span style="color: #000000;">)
+    theme </span>= models.CharField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">博客主题</span><span style="color: #800000;">'</span>, max_length=32<span style="color: #000000;">)
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self.title
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Category(models.Model):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">
+    博主个人文章分类表
+    </span><span style="color: #800000;">"""</span><span style="color: #000000;">
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    title </span>= models.CharField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">分类标题</span><span style="color: #800000;">'</span>, max_length=32<span style="color: #000000;">)
+    blog </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">所属博客</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">'</span><span style="color: #800000;">Blog</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self.title
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Tag(models.Model):
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    title </span>= models.CharField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">标签名称</span><span style="color: #800000;">'</span>, max_length=32<span style="color: #000000;">)
+    blog </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">所属博客</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">'</span><span style="color: #800000;">Blog</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self.title
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Article(models.Model):
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    title </span>= models.CharField(max_length=50, verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">文章标题</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+    desc </span>= models.CharField(max_length=255, verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">文章描述</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+    create_time </span>= models.DateTimeField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">创建时间</span><span style="color: #800000;">'</span>, auto_now_add=<span style="color: #000000;">True)
+    content </span>=<span style="color: #000000;"> models.TextField()
+​
+    comment_count </span>= models.IntegerField(default=<span style="color: #000000;">0)
+    up_count </span>= models.IntegerField(default=<span style="color: #000000;">0)
+    down_count </span>= models.IntegerField(default=<span style="color: #000000;">0)
+​
+    user </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">作者</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">'</span><span style="color: #800000;">UserInfo</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+    category </span>= models.ForeignKey(to=<span style="color: #800000;">'</span><span style="color: #800000;">Category</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, null=True, on_delete=<span style="color: #000000;">models.CASCADE)
+    tags </span>=<span style="color: #000000;"> models.ManyToManyField(
+        to</span>=<span style="color: #800000;">"</span><span style="color: #800000;">Tag</span><span style="color: #800000;">"</span><span style="color: #000000;">,
+        through</span>=<span style="color: #800000;">'</span><span style="color: #800000;">Article2Tag</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+        through_fields</span>=(<span style="color: #800000;">'</span><span style="color: #800000;">article</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">tag</span><span style="color: #800000;">'</span><span style="color: #000000;">),
+    )
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self.title
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Article2Tag(models.Model):
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    article </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">文章</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">"</span><span style="color: #800000;">Article</span><span style="color: #800000;">"</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+    tag </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">标签</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">"</span><span style="color: #800000;">Tag</span><span style="color: #800000;">"</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+​
+    </span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Meta:
+        unique_together </span>=<span style="color: #000000;"> [
+            (</span><span style="color: #800000;">'</span><span style="color: #800000;">article</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">tag</span><span style="color: #800000;">'</span><span style="color: #000000;">),
+        ]
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        v </span>= self.article.title + <span style="color: #800000;">"</span><span style="color: #800000;">---</span><span style="color: #800000;">"</span> +<span style="color: #000000;"> self.tag.title
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> v
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> ArticleUpDown(models.Model):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">
+    点赞表
+    </span><span style="color: #800000;">"""</span><span style="color: #000000;">
+​
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    user </span>= models.ForeignKey(<span style="color: #800000;">'</span><span style="color: #800000;">UserInfo</span><span style="color: #800000;">'</span>, null=True, on_delete=<span style="color: #000000;">models.CASCADE)
+    article </span>= models.ForeignKey(<span style="color: #800000;">"</span><span style="color: #800000;">Article</span><span style="color: #800000;">"</span>, null=True, on_delete=<span style="color: #000000;">models.CASCADE)
+    is_up </span>= models.BooleanField(default=<span style="color: #000000;">True)
+​
+    </span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Meta:
+        unique_together </span>=<span style="color: #000000;"> [
+            (</span><span style="color: #800000;">'</span><span style="color: #800000;">article</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">user</span><span style="color: #800000;">'</span><span style="color: #000000;">),
+        ]
+​
+​
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Comment(models.Model):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">
+​
+    评论表
+​
+    </span><span style="color: #800000;">"""</span><span style="color: #000000;">
+    nid </span>= models.AutoField(primary_key=<span style="color: #000000;">True)
+    article </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">评论文章</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">'</span><span style="color: #800000;">Article</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+    user </span>= models.ForeignKey(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">评论者</span><span style="color: #800000;">'</span>, to=<span style="color: #800000;">'</span><span style="color: #800000;">UserInfo</span><span style="color: #800000;">'</span>, to_field=<span style="color: #800000;">'</span><span style="color: #800000;">nid</span><span style="color: #800000;">'</span>, on_delete=<span style="color: #000000;">models.CASCADE)
+    content </span>= models.CharField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">评论内容</span><span style="color: #800000;">'</span>, max_length=255<span style="color: #000000;">)
+    create_time </span>= models.DateTimeField(verbose_name=<span style="color: #800000;">'</span><span style="color: #800000;">创建时间</span><span style="color: #800000;">'</span>, auto_now_add=<span style="color: #000000;">True)
+    parent_comment </span>= models.ForeignKey(<span style="color: #800000;">'</span><span style="color: #800000;">self</span><span style="color: #800000;">'</span>, null=True, on_delete=<span style="color: #000000;">models.CASCADE)
+​
+    </span><span style="color: #0000ff;">def</span> <span style="color: #800080;">__str__</span><span style="color: #000000;">(self):
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> self.content
+​</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>&nbsp;</p>
+<a name="_label1_1"></a><h3 class="md-end-block md-heading"><span>2.2 站点管理</span></h3>
+<p><span>核心代码：</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&#39;320e370f-4d91-482a-b57b-3b4bc0e7f5c4&#39;)"><img id="code_img_closed_320e370f-4d91-482a-b57b-3b4bc0e7f5c4" class="code_img_closed" src="./readme_files/ContractedBlock.gif" alt=""><img id="code_img_opened_320e370f-4d91-482a-b57b-3b4bc0e7f5c4" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide(&#39;320e370f-4d91-482a-b57b-3b4bc0e7f5c4&#39;,event)" src="./readme_files/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_320e370f-4d91-482a-b57b-3b4bc0e7f5c4" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">from</span> django.contrib <span style="color: #0000ff;">import</span><span style="color: #000000;"> admin
+​
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> Register your models here.</span>
+<span style="color: #0000ff;">from</span> blog <span style="color: #0000ff;">import</span><span style="color: #000000;"> models
+​
+admin.site.register(models.UserInfo)
+admin.site.register(models.Article)
+admin.site.register(models.Article2Tag)
+admin.site.register(models.ArticleUpDown)
+admin.site.register(models.Blog)
+admin.site.register(models.Category)
+admin.site.register(models.Comment)
+admin.site.register(models.Tag)</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span class="cm-keyword">&nbsp;</span></pre>
+<a name="_label1_2"></a><h3 class="md-end-block md-heading"><span>2.3 注册</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<p class="md-end-block"><span>1.form组件</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span><span class="cm-number">1.<span class="cm-variable">form组件<br><span> &nbsp; &nbsp;<span class="cm-keyword">class <span class="cm-def">RegForm(<span class="cm-variable">forms.<span class="cm-property">Form):<span class="cm-keyword">pass<br><span> &nbsp; &nbsp;<span class="cm-variable">局部钩子 <span class="cm-variable">全局钩子<br><span><span>​<br><span><span class="cm-number">2.<span class="cm-variable">上传头像 <span class="cm-variable">avatar<br><span> &nbsp; &nbsp;<span class="cm-variable">图像预览<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">var <span class="cm-variable">reader = <span class="cm-variable">new <span class="cm-variable">FileReader();<br><span> &nbsp; &nbsp;<span class="cm-variable">上传文件<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">formdata = <span class="cm-variable">new <span class="cm-variable">FormData();<br><span><span>​<br><span><span class="cm-number">3.<span class="cm-variable">用户文件配置<br><span> &nbsp; &nbsp;<span class="cm-variable">avatar = <span class="cm-variable">models.<span class="cm-property">FileField(<span class="cm-variable">upload_to=<span class="cm-string">'avatars/', <span class="cm-variable">default=<span class="cm-string">'avatars/default.png')<br><span> &nbsp; &nbsp;<span class="cm-variable">MEDIA_ROOT = <span class="cm-variable">os.<span class="cm-property">path.<span class="cm-property">join(<span class="cm-variable">BASE_DIR, <span class="cm-string">'blog', <span class="cm-string">'media')<br><span> &nbsp; &nbsp;<span class="cm-variable">MEDIA_URL = <span class="cm-string">'/media/'<br><span> &nbsp; &nbsp;<span class="cm-variable">re_path(<span class="cm-string">r'media/(?P&lt;path&gt;.*)$',<span class="cm-variable">serve,{<span class="cm-string">'document_root':<span class="cm-variable">settings.<span class="cm-property">MEDIA_ROOT})<br><span><span><img src="./readme_files/1356841-20180911215202023-639451677.png" alt=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<p class="md-end-block">&nbsp;</p>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202756.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202756.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<a name="_label1_3"></a><h3 class="md-end-block md-heading"><span>2.4 登录</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span><span class="cm-number">1.<span class="cm-variable">验证码<br><span> &nbsp; &nbsp;<span class="cm-variable">随机生成5个字符，0<span class="cm-operator">-<span class="cm-number">9 <span class="cm-variable">a<span class="cm-operator">-<span class="cm-variable">z <span class="cm-variable">A<span class="cm-operator">-<span class="cm-variable">Z<br><span><span>​<br><span> &nbsp; &nbsp;<span class="cm-variable">pip <span class="cm-variable">install <span class="cm-variable">pillow<br><span> &nbsp; &nbsp;<span class="cm-keyword">from <span class="cm-variable">PIL <span class="cm-keyword">import <span class="cm-variable">Image, <span class="cm-variable">ImageDraw, <span class="cm-variable">ImageFont<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">image = <span class="cm-variable">Image.<span class="cm-property">new()<br><span><span>​<br><span> &nbsp; &nbsp;<span class="cm-variable">在内存中生成图片直接返回<br><span> &nbsp; &nbsp;<span class="cm-keyword">from <span class="cm-variable">io <span class="cm-keyword">import <span class="cm-variable">BytesIO<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">f = <span class="cm-variable">BytesIO()<br><span><span>​<br><span><span class="cm-number">2.<span class="cm-variable">request.<span class="cm-property">session[<span class="cm-string">'valid_str'] = <span class="cm-variable">valid_str<br><span> &nbsp; &nbsp;<span class="cm-variable">存在session中，为了之后登录，验证是否通过<br><span><span>​<br><span><span class="cm-number">3.<span class="cm-variable">验证码点击刷新：<br><span> &nbsp; &nbsp;<span class="cm-error">$(<span class="cm-string">'#valid_img').<span class="cm-property">click(<span class="cm-variable">function () {<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-error">$(<span class="cm-variable">this)[<span class="cm-number">0].<span class="cm-property">src += <span class="cm-string">'?'<br><span> &nbsp;  });<br><span><span>​<br><span><span class="cm-number">4.<span class="cm-variable">认证组件<br><span> &nbsp; &nbsp;<span class="cm-variable">valid_str = <span class="cm-variable">request.<span class="cm-property">session.<span class="cm-property">get(<span class="cm-string">'valid_str')<br><span> &nbsp; &nbsp;<span class="cm-keyword">if <span class="cm-variable">valid_str.<span class="cm-property">upper() == <span class="cm-variable">valid_code.<span class="cm-property">upper():<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">user = <span class="cm-variable">auth.<span class="cm-property">authenticate(<span class="cm-variable">username = <span class="cm-variable">user, <span class="cm-variable">password = <span class="cm-variable">pwd)<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if <span class="cm-variable">user:<br><span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">auth.<span class="cm-property">login(<span class="cm-variable">request, <span class="cm-variable">user)<br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span class="cm-keyword">&nbsp;</span></pre>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span><span class="cm-number"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-operator"><span class="cm-number"><span class="cm-variable"><span class="cm-operator"><span class="cm-variable"><span class="cm-variable"><span class="cm-operator"><span class="cm-variable"><span><span><span><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span><span><span><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-variable"><span><span><span><span class="cm-number"><span class="cm-variable"><span class="cm-property"><span class="cm-string"><span class="cm-variable"><span><span class="cm-variable"><span><span><span><span class="cm-number"><span class="cm-variable"><span><span class="cm-error"><span class="cm-string"><span class="cm-property"><span class="cm-variable"><span><span class="cm-error"><span class="cm-variable"><span class="cm-number"><span class="cm-property"><span class="cm-string"><span><span><span><span><span class="cm-number"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-string"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-property"><span class="cm-variable"><span class="cm-property"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><img src="./readme_files/1356841-20180911215140660-111765331.png" alt=""></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202704.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202704.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<a name="_label1_4"></a><h3 class="md-end-block md-heading"><span>2.5 网站首页</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span>1.bootstrap搭建页面<br><span><span>​<br><span>2.导航条<br><span> &nbsp;  登录： &nbsp; username / 注销<br><span> &nbsp;  未登录： 登录 / 注册<br><span><span>​<br><span>3.for循环<br><span> &nbsp; &nbsp; {% for article in article_list %}<br><span> &nbsp; &nbsp; {% endfor %}<br><img src="./readme_files/1356841-20180911215236923-1894987618.png" alt=""><br></span></span></span></span></span></span></span></span></span></span></span></pre>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911191043.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911191043.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<p class="md-end-block"><span>网页底部分页器：</span></p>
+<p class="md-end-block"><span><img src="./readme_files/1356841-20180911215251033-1672110239.png" alt=""></span></p>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911200719.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911200719.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<a name="_label1_5"></a><h3 class="md-end-block md-heading"><span>2.6 个人站点</span></h3>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span>1.文章列表，分类列表，标签列表，日期归档列表<br><span> &nbsp;  文章列表： &nbsp; &nbsp; /blog/egon/<br><span> &nbsp;  分类列表： &nbsp; &nbsp; /blog/egon/cate/python<br><span> &nbsp;  标签列表： &nbsp; &nbsp; /blog/egon/tag/生活<br><span> &nbsp;  日期归档列表： /blog/egon/archive/2018-06<br><span><span>​<br><span>2.模板继承<br><span> &nbsp;  {% extends 'base.html' %}<br><span><span>​<br><span> &nbsp;  {% block content %}<br><span> &nbsp;  {% endblock content%}}<br><span><span>​<br><span>3.自定义标签<br><span> &nbsp;  /blog/templatetags/my_tag.py<br><span><span>​<br><span> &nbsp;  @register.inclusion_tag('menu.html')<br><span> &nbsp;  def get_menu(username):<br><span> &nbsp; &nbsp; &nbsp;  ...<br><span> &nbsp; &nbsp; &nbsp;  return {} # 去渲染 menu.html<br><span><span>​<br><span>4.分组查询 .annotate() / extra()应用<br><span> &nbsp;  多表分组<br><span> &nbsp; &nbsp; &nbsp;  tag_list = Tag.objects.filter(blog=blog).annotate(<br><span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  count = Count('article')).values_list('title', 'count')<br><span><span>​<br><span> &nbsp;  单表分组 / DATE_FORMAT() /  extra()<br><span> &nbsp; &nbsp; &nbsp;  date_list = Article.objects.filter(user=user).extra(<br><span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  select={"create_ym": "DATE_FORMAT(create_time,'%%Y-%%m')"}).values('create_ym').annotate(<br><span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  c = Count('nid')).values_list('create_ym', 'c')<br><span><span>​<br><span>5. 时间、区域配置<br><span> &nbsp; &nbsp; TIME_ZONE = 'Asia/Shanghai'<br><span> &nbsp; &nbsp; USE_TZ = False<br><img src="./readme_files/1356841-20180911215310812-577258899.png" alt=""><br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911201734.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911201734.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<a name="_label1_6"></a><h3 class="md-end-block md-heading"><span>2.7 文章详情</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span>1.模板继承<br><span> &nbsp;  article = Article.objects.filter(pk=article_id).first()<br><span> &nbsp;  {% extends 'base.html' %}<br><span> &nbsp;  {% block content %}<br><span> &nbsp; &nbsp; &nbsp; &nbsp; ...<br><span> &nbsp; &nbsp; &nbsp;  {{ article.articledetail.content|safe }}<br><span> &nbsp;  {% endblock content %}<br><img src="./readme_files/1356841-20180911215337094-341474826.png" alt=""><br></span></span></span></span></span></span></span></pre>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202104.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202104.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202114.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202114.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<a name="_label1_7"></a><h3 class="md-end-block md-heading">&nbsp;</h3>
+<a name="_label1_8"></a><h3 class="md-end-block md-heading"><span>2.8 后台管理</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span><span class="cm-number">1.<span class="cm-variable">支持文章编辑<br><span><span class="cm-number">2.<span class="cm-variable">支持富文本编辑器（支持渲染已有文章）<br><span><span class="cm-number">3.<span class="cm-variable">支持删除文章<br><span><span class="cm-number">4.<span class="cm-variable">防止Xss攻击（基于BS4）<br><span> <span class="cm-comment"># 防止xss攻击,过滤script标签<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">soup = <span class="cm-variable">BeautifulSoup(<span class="cm-variable">content, <span class="cm-string">"html.parser")<br><span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for <span class="cm-variable">tag <span class="cm-keyword">in <span class="cm-variable">soup.<span class="cm-property">find_all():<br><span><span>​<br><span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if <span class="cm-variable">tag.<span class="cm-property">name == <span class="cm-string">"script":<br><span class="cm-tab-wrap-hack"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">tag.<span class="cm-property">decompose()</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<p class="md-end-block">&nbsp;<img src="./readme_files/1356841-20180911215442402-358164894.png" alt=""></p>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202249.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911202249.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<p class="md-end-block"><span class="md-image md-img-loaded" data-src="/home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911213437.png"><img src="file:///home/hyc/Desktop/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20180911213437.png?lastModify=1536673308" alt="" data-local-refresh="true"></span></p>
+<a name="_label1_9"></a><h3 class="md-end-block md-heading"><span>2.9 批量建立测试数据</span></h3>
+<p class="md-end-block"><span>核心代码：</span></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span><span class="cm-number">1.<span class="cm-variable">定制建立测试数据<br><span><span class="cm-number">2.<span class="cm-variable">初始化得到100条用户信息，以及为100个客户分别添加文章、博客的详细信息<br></span></span></span></span></span></span></pre>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&#39;97d1fd46-49eb-4866-96d4-cd50c7a04c5d&#39;)"><img id="code_img_closed_97d1fd46-49eb-4866-96d4-cd50c7a04c5d" class="code_img_closed" src="./readme_files/ContractedBlock.gif" alt=""><img id="code_img_opened_97d1fd46-49eb-4866-96d4-cd50c7a04c5d" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide(&#39;97d1fd46-49eb-4866-96d4-cd50c7a04c5d&#39;,event)" src="./readme_files/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_97d1fd46-49eb-4866-96d4-cd50c7a04c5d" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">def</span><span style="color: #000000;"> supreme(request):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">
+    这是数据初始化视图，将会生成99条测试数据，用户名为管理员输入的字符后，加1_99.
+    密码为管理员填入的密码
+    :param request:
+    :return:
+    </span><span style="color: #800000;">"""</span><span style="color: #000000;">
+    tag_title </span>= [<span style="color: #800000;">'</span><span style="color: #800000;">BASIC</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">C</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                 </span><span style="color: #800000;">'</span><span style="color: #800000;">C++</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">PASCAL</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">FORTRAN</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">LISP</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">Prolog</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">CLIPS</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">OpenCyc</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">Fazzy</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">Python</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">PHP</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">Ruby</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                 </span><span style="color: #800000;">'</span><span style="color: #800000;">Lua</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+    category_titles </span>= [<span style="color: #800000;">'</span><span style="color: #800000;">非技术区</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">软件测试</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">代码与软件发布</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">计算机图形学</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">游戏开发</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">程序人生</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">求职面试</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">读书区</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">转载区</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">Windows</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">翻译区</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">开源研究</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                       </span><span style="color: #800000;">'</span><span style="color: #800000;">Flex</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+    userlist </span>=<span style="color: #000000;"> []
+    bolglist </span>=<span style="color: #000000;"> []
+    article_list </span>=<span style="color: #000000;"> []
+    tag_list </span>=<span style="color: #000000;"> []
+    cat_list </span>=<span style="color: #000000;"> []
+    article2tag_list </span>=<span style="color: #000000;"> []
+​
+    </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> request.is_ajax():
+​
+        form </span>=<span style="color: #000000;"> UserForm(request.POST)
+        response </span>= {<span style="color: #800000;">'</span><span style="color: #800000;">user</span><span style="color: #800000;">'</span>: None, <span style="color: #800000;">'</span><span style="color: #800000;">msg</span><span style="color: #800000;">'</span><span style="color: #000000;">: None}
+        </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> form.is_valid():
+​
+            response[</span><span style="color: #800000;">'</span><span style="color: #800000;">user</span><span style="color: #800000;">'</span>] = form.cleaned_data.get(<span style="color: #800000;">'</span><span style="color: #800000;">user</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+            </span><span style="color: #008000;">#</span><span style="color: #008000;"> 生成一条用户记录</span>
+            user = form.cleaned_data.get(<span style="color: #800000;">'</span><span style="color: #800000;">user</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+​
+            pwd </span>= form.cleaned_data.get(<span style="color: #800000;">'</span><span style="color: #800000;">pwd</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+            email </span>= form.cleaned_data.get(<span style="color: #800000;">'</span><span style="color: #800000;">email</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+            avatar_obj </span>= request.FILES.get(<span style="color: #800000;">'</span><span style="color: #800000;">avatar</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+            extra </span>=<span style="color: #000000;"> {}
+            </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> avatar_obj:
+                extra[</span><span style="color: #800000;">'</span><span style="color: #800000;">avatar</span><span style="color: #800000;">'</span>] =<span style="color: #000000;"> avatar_obj
+                with transaction.atomic():
+                    </span><span style="color: #0000ff;">for</span> i <span style="color: #0000ff;">in</span> range(1, 100<span style="color: #000000;">):
+                        Blog.objects.create(title</span>=<span style="color: #800000;">'</span><span style="color: #800000;">blog%s</span><span style="color: #800000;">'</span> %<span style="color: #000000;"> i)
+​
+                        UserInfo.objects.create_user(username</span>=user + str(i), password=pwd, email=email, **<span style="color: #000000;">extra)
+​
+                        UserInfo.objects.filter(username</span>=user + str(i)).update(blog_id=<span style="color: #000000;">i)
+​
+                        </span><span style="color: #0000ff;">for</span> title <span style="color: #0000ff;">in</span><span style="color: #000000;"> tag_title:
+                            tag_list.append(Tag(title</span>=title, blog_id=<span style="color: #000000;">i))
+​
+                        </span><span style="color: #0000ff;">for</span> cat <span style="color: #0000ff;">in</span><span style="color: #000000;"> category_titles:
+                            cat_list.append(Category(title</span>=cat, blog_id=<span style="color: #000000;">i))
+                        </span><span style="color: #0000ff;">import</span><span style="color: #000000;"> random
+                        </span><span style="color: #0000ff;">for</span> c <span style="color: #0000ff;">in</span> range(1, 7<span style="color: #000000;">):
+                            with open(</span><span style="color: #800000;">'</span><span style="color: #800000;">/home/hyc/PycharmProjects/cnblog/static/superme/%s.txt</span><span style="color: #800000;">'</span> % c, <span style="color: #800000;">'</span><span style="color: #800000;">r</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                                      encoding</span>=<span style="color: #800000;">'</span><span style="color: #800000;">utf-8</span><span style="color: #800000;">'</span><span style="color: #000000;">) as f:
+                                content </span>=<span style="color: #000000;"> f.read()
+​
+                            soup </span>= BeautifulSoup(content, <span style="color: #800000;">"</span><span style="color: #800000;">html.parser</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+                            </span><span style="color: #0000ff;">for</span> tag <span style="color: #0000ff;">in</span><span style="color: #000000;"> soup.find_all():
+                                </span><span style="color: #0000ff;">if</span> tag.name == <span style="color: #800000;">"</span><span style="color: #800000;">script</span><span style="color: #800000;">"</span><span style="color: #000000;">:
+                                    tag.decompose()
+                            desc </span>= soup.text[0:150] + <span style="color: #800000;">"</span><span style="color: #800000;">...</span><span style="color: #800000;">"</span><span style="color: #000000;">
+                            c_id </span>= 13 * (i - 1) + random.randrange(1, 9<span style="color: #000000;">)
+​
+                            article_list.append(
+                                Article(desc</span>=desc, title=<span style="color: #800000;">'</span><span style="color: #800000;">article%s</span><span style="color: #800000;">'</span> % c, content=content, user_id=i, category_id=<span style="color: #000000;">c_id))
+​
+                    Category.objects.bulk_create(cat_list)
+                    Tag.objects.bulk_create(tag_list)
+                    Article.objects.bulk_create(article_list)
+​
+        </span><span style="color: #0000ff;">else</span><span style="color: #000000;">:
+            response[</span><span style="color: #800000;">'</span><span style="color: #800000;">msg</span><span style="color: #800000;">'</span>] =<span style="color: #000000;"> form.errors
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> JsonResponse(response)
+​
+    my_from </span>=<span style="color: #000000;"> UserForm
+​
+    </span><span style="color: #0000ff;">return</span> render(request, <span style="color: #800000;">'</span><span style="color: #800000;">supreme.html</span><span style="color: #800000;">'</span>, {<span style="color: #800000;">'</span><span style="color: #800000;">from</span><span style="color: #800000;">'</span>: my_from})</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><img src="./readme_files/1356841-20180911215522692-421655458.png" alt=""></p>
+<pre class="md-fences md-end-block ty-contain-cm modeLoaded"><span><span class="cm-number"><span class="cm-variable"><span><span class="cm-number"><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-def"><span class="cm-variable"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-variable"><span class="cm-string"><span class="cm-string"><span><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span class="cm-string"><span><span class="cm-string"><span><span class="cm-variable"><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-string"><span><span class="cm-variable"><span><span class="cm-variable"><span><span class="cm-variable"><span><span class="cm-variable"><span><span class="cm-variable"><span><span class="cm-variable"><span><span><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-property"><span><span><span><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span><span class="cm-variable"><span class="cm-string"><span class="cm-keyword"><span class="cm-string"><span class="cm-keyword"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-property"><span><span><span><span class="cm-variable"><span class="cm-string"><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-string"><span><span class="cm-comment"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-string"><span><span><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-string"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-string"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-string"><span><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-string"><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-property"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-builtin"><span class="cm-number"><span class="cm-number"><span><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-variable"><span class="cm-string"><span class="cm-operator"><span class="cm-variable"><span><span><span><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><span class="cm-operator"><span class="cm-builtin"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-operator"><span class="cm-variable"><span><span><span><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><span class="cm-operator"><span class="cm-builtin"><span class="cm-variable"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><span><span><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span><span><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-property"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-builtin"><span class="cm-number"><span class="cm-number"><span><span class="cm-keyword"><span class="cm-builtin"><span class="cm-string"><span class="cm-operator"><span class="cm-variable"><span class="cm-string"><span><span class="cm-variable"><span class="cm-string"><span class="cm-keyword"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span><span><span><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-string"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-keyword"><span class="cm-variable"><span class="cm-property"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-property"><span class="cm-string"><span><span class="cm-variable"><span class="cm-property"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-property"><span class="cm-number"><span class="cm-number"><span class="cm-operator"><span class="cm-string"><span><span class="cm-variable"><span class="cm-number"><span class="cm-operator"><span class="cm-variable"><span class="cm-operator"><span class="cm-number"><span class="cm-operator"><span class="cm-variable"><span class="cm-property"><span class="cm-number"><span class="cm-number"><span><span><span><span class="cm-variable"><span class="cm-property"><span><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-string"><span class="cm-operator"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span class="cm-variable"><span><span><span><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-variable"><span><span class="cm-variable"><span class="cm-property"><span class="cm-property"><span class="cm-variable"><span><span><span><span class="cm-keyword"><span><span class="cm-variable"><span class="cm-string"><span class="cm-variable"><span class="cm-property"><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-variable"><span><span><span><span class="cm-variable"><span class="cm-variable"><span><span><span><span class="cm-keyword"><span class="cm-variable"><span class="cm-variable"><span class="cm-string"><span class="cm-string"><span class="cm-variable"><br><span><span>​</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+<div style="text-align: right;"><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#_labelTop" style="color:#f68a33">回到顶部</a><a name="_label2"></a></div><h2 class="md-end-block">3.源码链接：&nbsp;</h2>
+<p>https://github.com/hyyc554/BBS</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag">标签: <a href="https://www.cnblogs.com/huang-yc/tag/django/">django</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(9630644,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;3524b58e-fdad-442d-c1d7-08d58662b770&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./readme_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./readme_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/huang-yc/" target="_blank"><img src="./readme_files/20180411175016.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/huang-yc/">Huang_Yc</a><br>
+            <a href="http://home.cnblogs.com/u/huang-yc/followees">关注 - 7</a><br>
+            <a href="http://home.cnblogs.com/u/huang-yc/followers">粉丝 - 3</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(9630644,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(9630644,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="https://www.cnblogs.com/huang-yc/p/9610152.html" class="p_n_p_prefix">« </a> 上一篇：<a href="https://www.cnblogs.com/huang-yc/p/9610152.html" title="发布于2018-09-08 19:29">django——文本编辑器</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2018-09-11 21:58</span> <a href="https://www.cnblogs.com/huang-yc/">Huang_Yc</a> 阅读(<span id="post_view_count">11</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9630644" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/huang-yc/p/9630644.html#" onclick="AddToWz(9630644);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=420602,cb_entryId=9630644,cb_blogApp=currentBlogApp,cb_blogUserGuid='3524b58e-fdad-442d-c1d7-08d58662b770',cb_entryCreatedDate='2018/9/11 21:58:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/huang-yc/p/9630644.html#top">返回顶部</a></div>
+<div id="comment_form_container"><script type="text/javascript" src="./readme_files/mention.js"></script>
+<div id="commentform_title">发表评论</div>
+<span id="tip_comment" style="color:Red"></span>
+<p>
+昵称：<input type="text" id="tbCommentAuthor" class="author" disabled="disabled" size="50" value="Huang_Yc">
+</p>
+<div class="commentbox_main">
+<div class="commentbox_title">
+<div class="commentbox_title_left">评论内容：</div>
+<div class="commentbox_title_right">
+<img id="ubb_quote" class="comment_icon" src="./readme_files/quote.gif" alt="引用" title="添加引用" onclick="insertUBB(&#39;tbCommentBody&#39;,&#39;quote&#39;)">
+<img id="ubb_bold" class="comment_icon" src="./readme_files/b.png" alt="粗体" title="添加粗体" onclick="insertUBB(&#39;tbCommentBody&#39;,&#39;b&#39;)">
+<img id="ubb_url" class="comment_icon" src="./readme_files/lk.png" alt="链接" title="添加链接" onclick="insertUbbUrl(&#39;tbCommentBody&#39;)">
+<img id="ubb_indent" class="comment_icon" src="./readme_files/indent.png" alt="缩进" title="添加首行缩进" onclick="insertIndent(&#39;tbCommentBody&#39;)">
+<img id="ubb_code" class="comment_icon" src="./readme_files/InsertCode.gif" alt="代码" title="添加代码" onclick="insertUbbCode()">
+<img id="ubb_img" class="comment_icon" src="./readme_files/img.gif" alt="图片" title="上传图片" onclick="OpenImageUploadWindow();">
+</div>
+</div>
+<div class="clear"></div>
+<textarea id="tbCommentBody" class="comment_textarea"></textarea>
+</div>
+<p id="commentbox_opt">
+<input id="btn_comment_submit" type="button" class="comment_btn" value="提交评论">
+<span id="span_comment_canceledit" style="display:none"><a href="javascript:void(0);" onclick="return CancelCommentEdit()">不改了</a></span>
+<a href="javascript:void(0);" onclick="return logout();">退出</a>
+</p>
+<div id="tip_comment2" style="color:Red"></div>
+<p>
+[Ctrl+Enter快捷键提交]
+</p>
+<div style="display:none">
+<span id="comment_edit_id"></span><span id="span_parentcomment_id"></span>
+<span id="span_parent_id"></span>
+<span id="span_comment_replyto"></span>
+<span id="span_comment_posted"></span>
+</div>
+</div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="https://news.cnblogs.com/n/606923/" target="_blank">因追踪用户定位数据：谷歌可能在美国遭遇重罚</a><br> ·  <a href="https://news.cnblogs.com/n/606933/" target="_blank">股讯|拼多多股价大涨19.40% 人人大涨57.66%</a><br> ·  <a href="https://news.cnblogs.com/n/606935/" target="_blank">“北京一卡通”微信小程序试运行 六区公交支持扫码乘车</a><br> ·  <a href="https://news.cnblogs.com/n/606931/" target="_blank">电脑速度变慢 可能是偷偷“挖矿”去了</a><br> ·  <a href="https://news.cnblogs.com/n/606926/" target="_blank">华为完成业界首个针对SA进行的5G无线侧系统功能验证</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="https://kb.cnblogs.com/page/606682/" target="_blank">为什么说 Java 程序员必须掌握 Spring Boot ？</a><br> ·  <a href="https://kb.cnblogs.com/page/606645/" target="_blank">在学习中，有一个比掌握知识更重要的能力</a><br> ·  <a href="https://kb.cnblogs.com/page/603663/" target="_blank">如何招到一个靠谱的程序员</a><br> ·  <a href="https://kb.cnblogs.com/page/573614/" target="_blank">一个故事看懂“区块链”</a><br> ·  <a href="https://kb.cnblogs.com/page/603697/" target="_blank">被踢出去的用户</a><br></div>» <a href="https://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/huang-yc/">Huang_Yc</a><br>园龄：<a href="https://home.cnblogs.com/u/huang-yc/" title="入园时间：2018-03-20">5个月</a><br>粉丝：<a href="https://home.cnblogs.com/u/huang-yc/followers/">3</a><br>关注：<a href="https://home.cnblogs.com/u/huang-yc/followees/">7</a><div id="p_b_follow"></div><script>getFollowStatus('3524b58e-fdad-442d-c1d7-08d58662b770')</script></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/08/01&#39;);return false;">&lt;</a></td><td align="center">2018年9月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/10/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center"><a href="https://www.cnblogs.com/huang-yc/archive/2018/09/08.html"><u>8</u></a></td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center"><a href="https://www.cnblogs.com/huang-yc/archive/2018/09/11.html"><u>11</u></a></td><td class="CalTodayDay" align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/huang-yc/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="https://www.cnblogs.com/huang-yc/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="https://www.cnblogs.com/huang-yc/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="https://www.cnblogs.com/huang-yc/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="https://www.cnblogs.com/huang-yc/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/huang-yc/tag/python/">python</a>(8)</li><li><a href="https://www.cnblogs.com/huang-yc/tag/django/">django</a>(8)</li><li><a href="https://www.cnblogs.com/huang-yc/tag/mysql/">mysql</a>(3)</li><li><a href="https://www.cnblogs.com/huang-yc/tag/practice/">practice</a>(2)</li><li><a href="https://www.cnblogs.com/huang-yc/tag/python_study/">python_study</a>(2)</li><li><a href="https://www.cnblogs.com/huang-yc/tag/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a>(1)</li><li><a href="https://www.cnblogs.com/huang-yc/tag/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">思维导图</a>(1)</li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="https://www.cnblogs.com/huang-yc/archive/2018/09.html">2018年9月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="https://www.cnblogs.com/huang-yc/archive/2018/08.html">2018年8月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="https://www.cnblogs.com/huang-yc/archive/2018/07.html">2018年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="https://www.cnblogs.com/huang-yc/archive/2018/06.html">2018年6月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="https://www.cnblogs.com/huang-yc/archive/2018/05.html">2018年5月 (13)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="https://www.cnblogs.com/huang-yc/archive/2018/04.html">2018年4月 (3)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/huang-yc/p/8797113.html#3949013">1. Re:登陆认证程序</a></li>
+        <li class="recent_comment_body">Anyhow, this will be a good start!</li>
+        <li class="recent_comment_author">--Huang_Yc</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="https://www.cnblogs.com/huang-yc/p/9012822.html">1. python面向对象编程练习(580)</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9294044.html">2. python生成指定文件夹目录树(124)</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/8988157.html">3. 类的多态性(107)</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/9191906.html">4. mysql练习题(87)</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/8982817.html">5. 面向对象程序设计——基础概念(51)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="https://www.cnblogs.com/huang-yc/p/8797113.html">1. 登陆认证程序(1)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="https://www.cnblogs.com/huang-yc/p/8798782.html">1. 三级菜单(1)</a></li><li><a href="https://www.cnblogs.com/huang-yc/p/8810676.html">2. 修改个人信息的程序(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2018 Huang_Yc
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<script language="javascript" type="text/javascript">
+// 生成目录索引列表
+// ref: http://www.cnblogs.com/wangqiguo/p/4355032.html
+// modified by: zzq
+function GenerateContentList()
+{
+    var mainContent = $('#cnblogs_post_body');
+    var h2_list = $('#cnblogs_post_body h2');//如果你的章节标题不是h2,只需要将这里的h2换掉即可
+
+    if(mainContent.length < 1)
+        return;
+ 
+    if(h2_list.length>0)
+    {
+        var content = '<a name="_labelTop"></a>';
+        content += '<div id="navCategory" style="color:#152e97;">';
+        content += '<p style="font-size:18px;"><b>目录</b></p>';
+        content += '<ul>';
+        for(var i=0; i<h2_list.length; i++)
+        {
+            var go_to_top = '<div style="text-align: right;"><a href="#_labelTop" style="color:#f68a33">回到顶部</a><a name="_label' + i + '"></a></div>';
+            $(h2_list[i]).before(go_to_top);
+            
+            var h3_list = $(h2_list[i]).nextAll("h3");
+            var li3_content = '';
+            for(var j=0; j<h3_list.length; j++)
+            {
+                var tmp = $(h3_list[j]).prevAll('h2').first();
+                if(!tmp.is(h2_list[i]))
+                    break;
+                var li3_anchor = '<a name="_label' + i + '_' + j + '"></a>';
+                $(h3_list[j]).before(li3_anchor);
+                li3_content += '<li><a href="#_label' + i + '_' + j + '">' + $(h3_list[j]).text() + '</a></li>';
+            }
+            
+            var li2_content = '';
+            if(li3_content.length > 0)
+                li2_content = '<li><a href="#_label' + i + '">' + $(h2_list[i]).text() + '</a><ul>' + li3_content + '</ul></li>';
+            else
+                li2_content = '<li><a href="#_label' + i + '">' + $(h2_list[i]).text() + '</a></li>';
+            content += li2_content;
+        }
+        content += '</ul>';
+        content += '</div><p>&nbsp;</p>';
+        content += '<hr style="height:1px;border:none;border-top:1px dashed #0066CC;"/>';
+        if($('#cnblogs_post_body').length != 0 )
+        {
+            $($('#cnblogs_post_body')[0]).prepend(content);
+        }
+    }   
+}
+
+GenerateContentList();
+</script>
+<!--PageEndHtml Block End-->
+
+
+</body></html>

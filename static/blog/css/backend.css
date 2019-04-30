@@ -1,0 +1,57 @@
+
+       * {
+            margin: 0;
+            padding: 0;
+        }
+       a{text-decoration:none}
+
+        .header {
+            width: 100%;
+            height: 60px;
+            background-color: #333333;
+            line-height: 60px;
+        }
+
+        .header .title {
+            color: white;
+            font-size: 25px;
+            margin-left: 20px;
+            font-weight: 100;
+        }
+
+
+        .header .title .info{
+            float: right;
+            margin-right: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+
+        }
+        #accordion{
+            margin-top: 20px;
+        }
+
+        .article_list{
+            padding: 30px;
+        }
+
+        .alert-success{
+            margin: 8px 0;
+        }
+
+
+
+        [name='title']{
+            width: 100%;
+        }
+
+        .tab-pane{
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+        .tab-pane img{
+
+            border-radius: 80%;
+            margin: 20px 20px;
+        }
