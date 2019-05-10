@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>GEEK</title>
@@ -8,9 +9,6 @@
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/blog/bs/js/bootstrap.min.js"></script>
     <style>
-        {#body{#}
-        {#    padding-bottom: 80px;#}
-        {#}#}
         a {
             text-decoration: none;
             color: #000;
@@ -22,13 +20,14 @@
         }
 
         #blog_super {
-        background-image: url("/static/img/pexels-photo-169789.png");
-            {#background: #373277;#}
+            background-image: url("/static/img/pexels-photo-169789.png");
+
             color: white;
         }
 
-        .navbar-inverse, .navbar-inverse .navbar-nav > .active > a {
-            {#background-color: #373277;#}
+        .navbar-inverse,
+        .navbar-inverse .navbar-nav>.active>a {
+
             color: white;
             border: none;
         }
@@ -46,215 +45,254 @@
             height: 80px;
             width: 100%;
         }
-
-
     </style>
 </head>
+
 <body>
-
-<nav class="navbar navbar-inverse" style="margin-bottom: 0px">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">GEEK</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/index/">主页<span class="sr-only">(current)</span></a></li>
-
-                <li><a href="/{{ request.user.username }}/">博文</a></li>
-
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-
-                {% if request.user.is_authenticated %}
-                    <li><a href="#"><span id="user_icon"
-                                          class="glyphicon glyphicon-user"></span>{{ request.user.username }}</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">设置<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">修改密码</a></li>
-                            <li><a href="#">修改头像</a></li>
-                            <li><a href="/cn_backend/">管理</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="/logout/">注销</a></li>
-
-
-                        </ul>
-                    </li>
-
-                {% else %}
-                    <li><a href="/login/">登录</a></li>
-                    <li><a href="/register/">注册</a></li>
-                {% endif %}
-
-
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-<div class="updates-banner home ">
-    <div class="container">
-        <h2 class="text-center">风之所向，吾之所往</h2>
-    </div>
-    <div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span
-            class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
-</div>
-<div class="jumbotron" id="blog_super">
-    <span class="center-block text-center"><h1>GEEK</h1></span>
-    <p class="text-center">极客——次时代博客</p>
-    <p class="center-block text-center"><a class="btn btn-default btn-lg" href="/{{ request.user.username }}/"
-                                           role="button">即刻前往个人站点</a></p>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-3">
-
-            <div class="panel panel-primary">
-                <div class="panel-heading text-center"><h2>公告栏</h2></div>
-                <div class="panel-body">
-                    <h3 class="text-center">博主：抛帽者</h3>
-                    <h4 class="text-center">后端工程师</h4>
-                    <h4 class="text-center"><a href="https://github.com/hyyc554" class="iconfont icon-github"
-                                               title="github">我的github</a></h4>
-                </div>
-            </div>
-            <div class="panel panel-primary">
-                <div class="panel-heading">推荐榜</div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        {% for top in top_up %}
-                            <li class="list-group-item">
-                                <span class="badge">{{ top.up_count }}</span>
-                                <a href="/{{ top.user.username }}/articles/{{ top.pk }}">{{ top.title }}</a>
-                            </li>
-                        {% endfor %}
-
-
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="col-md-6">
-
-            <div class="article_list">
-                {% for article in article_list %}
-                    <div class="article-item panel panel-default">
-                        <p class="blog_title panel-heading" style="font-size: 50px"><a
-                                href="/{{ article.user.username }}/articles/{{ article.pk }}">{{ article.title }}</a>
-                        </p>
-                        <div class="article-desc panel-body">
-                        <span class="media-left">
-                            <a href="/{{ article.user.username }}/"><img width="56" height="56"
-                                                                         src="media/{{ article.user.avatar }}"
-                                                                         alt=""></a>
-                        </span>
-                            <span class="media-right">
-                            {{ article.desc }}
-                        </span>
+        <div class="row">
+                <nav class="navbar navbar-inverse" style="margin-bottom: 0px">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">GEEK</a>
+                            </div>
+            
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="/index/">主页<span class="sr-only">(current)</span></a></li>
+            
+                                    <li><a href="/{{ request.user.username }}/">博文</a></li>
+            
+                                </ul>
+            
+                                <ul class="nav navbar-nav navbar-right">
+            
+                                    {% if request.user.is_authenticated %}
+                                    <li><a href="#"><span id="user_icon"
+                                                class="glyphicon glyphicon-user"></span>{{ request.user.username }}</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-haspopup="true" aria-expanded="false">设置<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">修改密码</a></li>
+                                            <li><a href="#">修改头像</a></li>
+                                            <li><a href="/cn_backend/">管理</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="/logout/">注销</a></li>
+            
+            
+                                        </ul>
+                                    </li>
+            
+                                    {% else %}
+                                    <li><a href="/login/">登录</a></li>
+                                    <li><a href="/register/">注册</a></li>
+                                    {% endif %}
+            
+            
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                    <div class="updates-banner home ">
+                        <div class="container">
+                            <h2 class="text-center">风之所向，吾之所往</h2>
                         </div>
-                        <div class="panel-footer pub_info">
-                            <span><a href="/{{ article.user.username }}/">{{ article.user.username }}</a></span> &nbsp;&nbsp;&nbsp;
-                            <span>发布于 &nbsp;&nbsp;{{ article.create_time|date:"Y-m-d H:i" }}</span>&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-comment"></span>评论({{ article.comment_count }})&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-thumbs-up"></span>点赞({{ article.up_count }})&nbsp;&nbsp;
+                        <div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn">
+                            <span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span>
                         </div>
                     </div>
-                    <hr>
-                {% endfor %}
-            <ul class="pagination" id="pager">
-
-                {% if article_list.has_previous %}
-                    <li class="previous"><a href="/index/?page={{ article_list.previous_page_number }}">上一页</a></li>
-                {% else %}
-                    <li class="previous disabled"><a href="#">上一页</a></li>
-                {% endif %}
-                {% for num in pageRange %}
-
-                    {% if num == currentPage %}
-                        <li class="item active"><a href="/index/?page={{ num }}">{{ num }}</a></li>
-                    {% else %}
-                        <li class="item"><a href="/index/?page={{ num }}">{{ num }}</a></li>
-
-                    {% endif %}
-                {% endfor %}
-
-                {% if article_list.has_next %}
-                    <li class="next"><a href="/index/?page={{ article_list.next_page_number }}">下一页</a></li>
-                {% else %}
-                    <li class="next disabled"><a href="#">下一页</a></li>
-                {% endif %}
-
-            </ul>
-            </div>
-
+                    <div class="jumbotron" id="blog_super">
+                        <span class="center-block text-center">
+                            <h1>GEEK</h1>
+                        </span>
+                        <p class="text-center">极客——次时代博客</p>
+                        <p class="center-block text-center"><a class="btn btn-default btn-lg" href="/{{ request.user.username }}/"
+                                role="button">即刻前往个人站点</a></p>
+                    </div>
         </div>
-        <div class="col-md-3">
-            <div class="panel panel-primary">
-                <div class="panel-heading text-center">最近在读书单</div>
-                <div class="panel-body">
+        
 
-                    <ul class="list-group">
-                        <li class="list-group-item text-center">
-                            《redis设计与实现》
-                        </li>
-                        <li class="list-group-item text-center">
-                            《高性能的MySQL》
-                        </li>
-                        <li class="list-group-item text-center">
-                            《GO语言程序设计》
-                        </li>
-                    </ul>
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading text-center">
+                            <h2>公告栏</h2>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="text-center">博主：抛帽者</h3>
+                            <h4 class="text-center">后端工程师</h4>
+                            <h4 class="text-center"><a href="https://github.com/hyyc554" class="iconfont icon-github"
+                                    title="github">我的github</a></h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">推荐榜</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                {% for top in top_up %}
+                                <li class="list-group-item">
+                                    <span class="badge">{{ top.up_count }}</span>
+                                    <a href="/{{ top.user.username }}/articles/{{ top.pk }}">{{ top.title }}</a>
+                                </li>
+                                {% endfor %}
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="article_list">
+                        {% for article in article_list %}
+                        <div class="article-item panel panel-default">
+                            <p class="blog_title panel-heading" style="font-size: 50px"><a
+                                    href="/{{ article.user.username }}/articles/{{ article.pk }}">{{ article.title }}</a>
+                            </p>
+                            <div class="article-desc panel-body">
+                                <span class="media-left">
+                                    <a href="/{{ article.user.username }}/"><img width="56" height="56"
+                                            src="media/{{ article.user.avatar }}" alt=""></a>
+                                </span>
+                                <span class="media-right">
+                                    {{ article.desc }}
+                                </span>
+                            </div>
+                            <div class="panel-footer pub_info">
+                                <span><a href="/{{ article.user.username }}/">{{ article.user.username }}</a></span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>发布于 &nbsp;&nbsp;{{ article.create_time|date:"Y-m-d H:i" }}</span>&nbsp;&nbsp;
+                                <span
+                                    class="glyphicon glyphicon-comment"></span>评论({{ article.comment_count }})&nbsp;&nbsp;
+                                <span
+                                    class="glyphicon glyphicon-thumbs-up"></span>点赞({{ article.up_count }})&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <hr>
+                        {% endfor %}
+                        <ul class="pagination" id="pager">
+
+                            {% if article_list.has_previous %}
+                            <li class="previous"><a href="/index/?page={{ article_list.previous_page_number }}">上一页</a>
+                            </li>
+                            {% else %}
+                            <li class="previous disabled"><a href="#">上一页</a></li>
+                            {% endif %}
+                            {% for num in pageRange %}
+
+                            {% if num == currentPage %}
+                            <li class="item active"><a href="/index/?page={{ num }}">{{ num }}</a></li>
+                            {% else %}
+                            <li class="item"><a href="/index/?page={{ num }}">{{ num }}</a></li>
+
+                            {% endif %}
+                            {% endfor %}
+
+                            {% if article_list.has_next %}
+                            <li class="next"><a href="/index/?page={{ article_list.next_page_number }}">下一页</a></li>
+                            {% else %}
+                            <li class="next disabled"><a href="#">下一页</a></li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-info">
+                        <div class="panel-heading" id="comment_nickname"></div>
+                        <div class="panel-body">
+                            <h4 id="hotComments">
+                                </h3>
+
+                        </div>
+                        <div class="panel-body ">
+                            <img id="imgValidateCode" class="img-responsive img-rounded">
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading text-center">最近在读书单</div>
+                        <div class="panel-body">
+
+                            <ul class="list-group">
+                                <li class="list-group-item text-center">
+                                    《redis设计与实现》
+                                </li>
+                                <li class="list-group-item text-center">
+                                    《高性能的MySQL》
+                                </li>
+                                <li class="list-group-item text-center">
+                                    《GO语言程序设计》
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
-
-        </div>
+        <div class="row"><footer  role="contentinfo">
+                <div class="container">
+                    <div class="row">
+                        <div class="left col-md-7">
+                            <ul class="links">
+                                <li>
+                                    <span class="message">粤ICP备 19044639号</span>
+    
+                                </li>
+                                <li>
+                                    <span class="message">YC的技术博客</span>
+    
+                                </li>
+    
+    
+    
+                            </ul>
+                        </div>
+                        <div class="right col-md-5">
+                            <ul class="links">
+    
+                                <li>建站日期：2019</li>
+                                <li>Django强力驱动</li>
+                            </ul>
+    
+    
+                        </div>
+                    </div>
+                </div>
+            </footer></div>
+        
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', 'https://api.comments.hk/');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    var data = JSON.parse(xhr.responseText);
+                    var hotComments = document.getElementById('hotComments');
+                    hotComments.innerText = data.comment_content;
+                    $("#comment_nickname").text("@" + data.comment_nickname + "在歌曲：\"" + data.title + "\"下评论道");
+                    console.log(data)
+                    // $("#hotComments").css("background-img",data.images);
+                    $('#imgValidateCode').attr("src", data.images);
+                }
+            }
+            xhr.send();
+        </script>
     </div>
-</div>
-<footer role="contentinfo" >
-    <div class="container">
-        <div class="row">
-            <div class="left col-md-7">
-                <ul class="links">
-                    <li>
-                        <span class="message">粤ICP备 19044639号</span>
-
-                    </li>
-                    <li>
-                        <span class="message">YC的技术博客</span>
-
-                    </li>
-
-
-
-                </ul>
-            </div>
-            <div class="right col-md-5">
-                <ul class="links">
-
-                    <li>建站日期：2019</li>
-                    <li>Django强力驱动</li>
-                </ul>
-
-
-            </div>
-        </div>
-    </div>
-</footer>
 </body>
 
 </html>
