@@ -66,7 +66,7 @@ def supreme(request):
                     for i in range(1, 100):
                         bolglist.append(Blog(title='blog%s' % i))
                         # Blog.objects.create(title='blog%s' % i)
-                        # userlist.append(UserInfo(username='hyc' + str(i), password=123, email=email,**extra))
+                        # userlist.append(UserInfo(username='hyc' + str(i), password=avatars, email=email,**extra))
 
                         # UserInfo.objects.create_user(username=user + str(i), password=pwd, email=email, **extra)
                         #

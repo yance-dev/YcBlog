@@ -72,29 +72,29 @@ WSGI_APPLICATION = 'cnblog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         # 'NAME':'myblog', # 要连接的数据库，连接前需要创建好
-#         'NAME': 'bbs11',  # 要连接的数据库，连接前需要创建好
-#         'USER': 'root',  # 连接数据库的用户名
-#         'PASSWORD': '123',  # 连接数据库的密码
-#         'HOST': 'localhost',  # 连接主机，默认本级
-#         'PORT': 3306,  # 端口 默认3306
-#         # 'OPTIONS': {
-#         #     "init_command": "SET foreign_key_checks = 0;",
-#         # }
-
-#     },
-
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        # 'NAME':'myblog', # 要连接的数据库，连接前需要创建好
+        'NAME': 'ycblog',  # 要连接的数据库，连接前需要创建好
+        'USER': 'root',  # 连接数据库的用户名
+        'PASSWORD': 'Root!2345',  # 连接数据库的密码
+        'HOST': 'localhost',  # 连接主机，默认本级
+        'PORT': 3306,  # 端口 默认3306
+        # 'OPTIONS': {
+        #     "init_command": "SET foreign_key_checks = 0;",
+        # }
+
+    },
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
