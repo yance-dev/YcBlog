@@ -2,87 +2,32 @@
 
 本项目是一个基于Django2.1的开源博客系统，方便技术人员快速构建属于自己的博客网站。
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+## 项目依赖软件
+- Python3.65
+- MySQL5.7
+## 主要的pythony依赖包
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+beautifulsoup4==4.7.1
+Django==2.1.6
+djangorestframework==3.9.2
+MarkupSafe==1.1.0
+Pillow==5.4.1
+PyMySQL==0.9.3
+pytz==2018.9
+requests==2.21.0
+urllib3==1.24.2
 ```
 
-And repeat
+## 主要功能
+- 用户登录注册
+- 随机验证码
+- 在线编辑、管理博文
+- 集成富文本编辑器
+- 允许注册后发表评论
+- 网易云音乐随机热评
 
-```
-until finished
-```
+## 致谢
+感谢[isecret](https://github.com/isecret)的[yuncun](https://github.com/isecret/yuncun)项目为本站的`网易云音乐随机热评`做出的贡献
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+## 开发人员
+- [抛帽者](https://github.com/hyyc554)
