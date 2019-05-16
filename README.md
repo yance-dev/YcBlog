@@ -5,7 +5,7 @@
 ## 项目依赖软件
 - Python3.65
 - MySQL5.7
-## 主要的pythony依赖包
+## 主要的python依赖包
 ```
 beautifulsoup4==4.7.1
 Django==2.1.6
