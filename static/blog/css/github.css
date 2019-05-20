@@ -255,3 +255,48 @@ pre {
     border-radius: 10px;
     background-color: #d8dce5;
 }
+
+
+.hljs{
+position: relative;
+max-width: 100%;
+box-shadow: 0px 1px 4px rgba(0,0,0,0.3),
+      0px 0px 20px rgba(0,0,0,0.1) inset;
+}
+
+.hljs::before,
+.hljs::after {
+ content:"";
+ position:absolute;
+ z-index:-1;
+}
+
+.hljs::before,
+.hljs::after {
+ content:"";
+ position:absolute;
+ z-index:-1;
+ bottom:15px;
+ left:10px;
+ width:50%;
+ height:20%;
+}
+
+.hljs::before,
+.hljs::after {
+ content:"";
+ position:absolute;
+ z-index:-1;
+ bottom:15px;
+ left:10px;
+ width:50%;
+ height:20%;
+ box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+ transform:rotate(-3deg);
+}
+
+.hljs::after{
+ right:10px;
+ left:auto;
+ transform:rotate(3deg);
+}

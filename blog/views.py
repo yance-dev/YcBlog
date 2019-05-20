@@ -149,7 +149,7 @@ def get_validCode_img(request):
 
 
 def my_paginator(request, article_list):
-    paginator = Paginator(article_list, 15)
+    paginator = Paginator(article_list, 10)
     page = request.GET.get('page', 1)
     currentPage = int(page)
 
@@ -388,7 +388,7 @@ def upload(request):
 
     return HttpResponse(json.dumps(response))
 
-
+@login_required
 def delete_article(request, article_id):
     """
     删除博客文章
@@ -399,7 +399,7 @@ def delete_article(request, article_id):
     Article.objects.filter(pk=article_id).delete()
     return redirect('cn_backend')
 
-
+@login_required
 def edit_article(request, article_id):
     """
     博客文章编辑功能

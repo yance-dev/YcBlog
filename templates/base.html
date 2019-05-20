@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>YC的技术博客</title>
@@ -9,13 +10,12 @@
     <link rel="stylesheet" href="/static/blog/bs/css/bootstrap.css">
 
     <script src="/static/js/jquery-3.3.1.min.js"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.css">
     <script type="text/javascript" src="https://unpkg.com/autocjs@1.3.0/dist/autoc.min.js"></script>
     <style>
@@ -24,13 +24,7 @@
             padding: 0;
         }
 
-        p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
+
 
         .header {
             width: 100%;
@@ -67,7 +61,7 @@
         }
 
         body {
-            font: 400 18px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+            font: 400 16px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
             color: #444443;
             letter-spacing: .04em;
             word-break: break-word;
@@ -81,66 +75,116 @@
         }
 
 
-        #my_blog p {
-
-
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
 
         #my_blog ul {
             margin-left: 30px;
             padding-left: 0;
         }
-        #my_blog img{
-            width: 100%;
+
+        #my_blog img {
+            max-height: 50rem;
+            max-width: 100%;
+            vertical-align: middle;
         }
 
 
+
+        .shadow {
+
+            position: relative;
+            max-width: 270px;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+                0px 0px 20px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        .shadow::before,
+        .shadow::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shadow::before,
+        .shadow::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            height: 20%;
+        }
+
+        .shadow::before,
+        .shadow::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            height: 20%;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            transform: rotate(-3deg);
+        }
+
+        .shadow::after {
+            right: 10px;
+            left: auto;
+            transform: rotate(3deg);
+        }
+
+
+        p {
+            margin: 0;
+        }
     </style>
     <link rel="stylesheet" href="/static/blog/css/github.css">
 
+    <script src="/static/blog/js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
 
 </head>
+
 <body>
-<nav class="navbar navbar-inverse" style="margin-bottom: 0px">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+    <nav class="navbar navbar-inverse" style="margin-bottom: 0px">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">GEEK</a>
-        </div>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">GEEK</a>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/index/">主页<span class="sr-only">(current)</span></a></li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/index/">主页<span class="sr-only">(current)</span></a></li>
 
-                <li><a href="/{{ request.user.username }}/">博文</a></li>
-                <li>
-                    {% load mytags %}
-                    {% get_calssfication_style username %}
-                </li>
+                    <li><a href="/{{ request.user.username }}/">博文</a></li>
+                    <li>
+                        {% load mytags %}
+                        {% get_calssfication_style username %}
+                    </li>
 
-            </ul>
+                </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
 
-                {% if request.user.is_authenticated %}
+                    {% if request.user.is_authenticated %}
                     <li><a href="#"><span id="user_icon"
-                                          class="glyphicon glyphicon-user"></span>{{ request.user.username }}</a></li>
+                                class="glyphicon glyphicon-user"></span>{{ request.user.username }}</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">设置<span class="caret"></span></a>
+                            aria-expanded="false">设置<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">修改密码</a></li>
                             <li><a href="#">修改头像</a></li>
@@ -152,85 +196,85 @@
                         </ul>
                     </li>
 
-                {% else %}
+                    {% else %}
                     <li><a href="/login/">登录</a></li>
                     <li><a href="/register/">注册</a></li>
-                {% endif %}
+                    {% endif %}
 
 
-            </ul>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <div class="updates-banner home ">
+        <div class="container">
+            <h2 class="text-center">风之所向，吾之所往</h2>
+        </div>
+        <div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span
+                class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
     </div>
-</nav>
-<div class="updates-banner home ">
+
+
+    <div class="jumbotron" id="blog_super">
+
+        <span class="center-block text-center">
+            <h1>GEEK</h1>
+        </span>
+        <p class="text-center">极客——次时代博客</p>
+        <p class="center-block text-center"><a class="btn btn-default btn-lg" href="/cn_backend/" role="button">控制台</a>
+        </p>
+
+
+    </div>
+
+
     <div class="container">
-        <h2 class="text-center">风之所向，吾之所往</h2>
-    </div>
-    <div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span
-            class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
-</div>
+        <div class="row">
 
+            <div class="col-md-12">
+                {% block content %}
 
-<div class="jumbotron" id="blog_super">
+                {% endblock %}
+                <ul class="pagination" id="pager">
 
-    <span class="center-block text-center"><h1>GEEK</h1></span>
-    <p class="text-center">极客——次时代博客</p>
-    <p class="center-block text-center"><a class="btn btn-default btn-lg" href="/cn_backend/"
-                                           role="button">控制台</a></p>
-
-
-</div>
-
-
-<div class="container">
-    <div class="row">
-
-        <div class="col-md-12">
-            {% block content %}
-
-            {% endblock %}
-            <ul class="pagination" id="pager">
-
-                {% if article_list.has_previous %}
+                    {% if article_list.has_previous %}
                     <li class="previous"><a href="/index/?page={{ article_list.previous_page_number }}">上一页</a></li>
-                {% else %}
+                    {% else %}
                     <li class="previous disabled"><a href="#">上一页</a></li>
-                {% endif %}
-                {% for num in pageRange %}
+                    {% endif %}
+                    {% for num in pageRange %}
 
                     {% if num == currentPage %}
-                        <li class="item active"><a href="/index/?page={{ num }}">{{ num }}</a></li>
+                    <li class="item active"><a href="/index/?page={{ num }}">{{ num }}</a></li>
                     {% else %}
-                        <li class="item"><a href="/index/?page={{ num }}">{{ num }}</a></li>
+                    <li class="item"><a href="/index/?page={{ num }}">{{ num }}</a></li>
 
                     {% endif %}
-                {% endfor %}
+                    {% endfor %}
 
-                {% if article_list.has_next %}
+                    {% if article_list.has_next %}
                     <li class="next"><a href="/index/?page={{ article_list.next_page_number }}">下一页</a></li>
-                {% else %}
+                    {% else %}
                     <li class="next disabled"><a href="#">下一页</a></li>
-                {% endif %}
+                    {% endif %}
 
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-{#<script src="{% static 'blog/js/script.js' %}"></script>#}
-<script type="text/javascript">
-    new AutocJS({
-        article: '#needtoc',
-    //文章的ID选择器名称
-    isOnlyAnchors: true,
-        //selector: 'h1',
-        // 不配置 selector 属性，即使用默认选择器
-        title
-    :
-    '文章目录',
-    })
-    ;
-
-</script>
+    {#<script src="{% static 'blog/js/script.js' %}"></script>#}
+    <script type="text/javascript">
+        new AutocJS({
+            article: '#needtoc',
+            //文章的ID选择器名称
+            isOnlyAnchors: true,
+            //selector: 'h1',
+            // 不配置 selector 属性，即使用默认选择器
+            title: '文章目录',
+        });
+    </script>
+    
 </body>
+
 </html>

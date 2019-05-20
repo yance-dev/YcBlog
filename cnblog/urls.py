@@ -32,6 +32,7 @@ urlpatterns = [
     path('comment/', views.comment),
     path('admin/', admin.site.urls),
     path('login/', views.login),
+    path('accounts/login/', views.login),
     path('index/', views.index),
     re_path('^$', views.index, name='port'),
     path('register/', views.register),
