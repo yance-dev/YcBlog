@@ -147,6 +147,6 @@ MEDIA_URL = "/media/"
 EMAIL_HOST = 'smtp.qq.com'  # 如果是 163 改成 smtp.163.com
 EMAIL_PORT = 465
 EMAIL_HOST_USER = '1415940604@qq.com'  # 帐号
-EMAIL_HOST_PASSWORD = 'thypyeprhbsjbaai'  # 密码
+EMAIL_HOST_PASSWORD = 'password'  # 密码
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_SSL = True
