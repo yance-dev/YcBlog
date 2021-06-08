@@ -11,7 +11,7 @@ elasticsearch==2.4.1
 idna==2.8
 itsdangerous==1.1.0
 MarkupSafe==1.1.0
-Pillow==5.4.1
+Pillow==8.2.0
 pycodestyle==2.4.0
 PyMySQL==0.9.3
 python-dateutil==2.8.0
